@@ -14,12 +14,10 @@ function App() {
     setResult(null);
     try {
       const res = await axios.post(
-        "http://localhost:4567/analyze",
+        "https://ruby-code-analyzer-backand.onrender.com/analyze",
         { code },
         { headers: { "Content-Type": "application/json" } }
       );
-
-      console.log("✅ Backend response:", res.data);
 
       if (res.data.success) {
         setResult(res.data.result);
