@@ -13,6 +13,7 @@ function App() {
     setError(null);
     setResult(null);
     try {
+      #Api Turned Off
       const res = await axios.post(
         "https://ruby-code-analyzer-backand.onrender.com/analyze",
         { code },
